@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>PyScript Demo</title>
+
+    <py-env>
+        - numpy
+        - utils
+    </py-env>
+</head>
+<body>
+    <py-script>
+        name='Vilas'
+        print(name)
+
+        console.log(name) 
+        <!-- We can use javascript too! -->
+    </py-script>
+
+    <div id="output" class="text-3xl"></div>
+    <!-- it has tailwind css also! -->
+
+    <py-script>
+        def getSum(x,y):
+            return x + y
+        pyscript.write("output",name)
+    </py-script>
+    press Shift-ENTER to evaluate a cell
+    <py-repl>
+        #here we can write python code itself.Try writing getSum(100,699) 
+    </py-repl>
+
+    <div id="root" class="text-center"></div>
+    <py-script>
+        import math
+        pyscript.write('root',math.sqrt(10))
+    </py-script>
+
+    <div class="text-center text-2xl" id="arrays"></div>
+    <py-script>
+        import numpy as np
+        <!-- #to use numpy like package we need to define in py-env -->
+
+        arr = np.array([34,6576,67,78,-34,0])
+        pyscript.write('arrays',arr)
+        pyscript.write('arrays',arr[3])
+        pyscript.write('arrays',arr)
+        pyscript.write('arrays',f"my array is {arr}")
+
+
+    </py-script>
+    <div id="ext"  class="text-3xl"></div>
+    <py-script src="./main.py">
+
+    </py-script>
+    <a href="./external.html">External</a>
+
+    <py-script>
+        import datetime
+
+        x = datetime.datetime.now()
+
+        print(x)
+
+    </py-script>
+</body>
+</html>

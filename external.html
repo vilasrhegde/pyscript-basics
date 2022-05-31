@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    <title>External</title>
+    <py-env>
+        - numpy
+        - paths:
+            - ./utils.py
+    </py-env>
+</head>
+<body>
+
+    <main id="shuffle" class="container  flex flex-col items-center justify-center">
+        <div id="shuffle_output"></div>
+        <button pys-onClick="shuffle_arrays" id="shuffle_btn" class="mt-4 p-2 text-white bg-blue-600 rounded" >
+            Shuffle
+        </button>
+    </main>
+    <div id="js_console"></div>
+
+    <py-script src="./main.py">
+
+    </py-script>
+</body>
+</html>
