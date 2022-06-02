@@ -3,5 +3,3 @@
 
 
 >This site was built using [GitHub Pages](https://vilasrhegde.github.io/pyscript-basics/).
-
-<sub>Thank you</sub>
